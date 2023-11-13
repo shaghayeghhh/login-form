@@ -1,0 +1,143 @@
+:root {
+    --light: #fff;
+    --dark: #000;
+    --mainColor: #fff;
+  }
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+      url('https://cdn57.androidauthority.net/wp-content/uploads/2015/11/00-best-backgrounds-and-wallpaper-apps-for-android.jpg');
+    background-size: cover;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .navbar {
+    width: 80%;
+    height: 50px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    margin-top: 2em;
+  }
+  
+  .logo-container .logo {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--light);
+    letter-spacing: 5px;
+    font-weight: bold;
+  }
+  
+  .items-container .items {
+    display: flex;
+  }
+  
+  .items .item {
+    list-style: none;
+    position: relative;
+    margin: 0 20px;
+  }
+  
+  .item-link {
+    text-decoration: none;
+    color: var(--light);
+    padding: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  .item-link:after {
+    content: "";
+    height: 2px;
+    width: 0;
+    background: var(--light);
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition-duration: 0.5s;
+  }
+  
+  .item-link:hover::after {
+    width: 100%;
+    opacity: 1;
+  }
+  
+  .container {
+    width: 400px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 10%;
+    min-height:1000px;
+  }
+  
+  .loginTitle {
+    font-size: 30px;
+    font-weight: bold;
+    border-bottom: 4px solid var(--mainColor);
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .input-group {
+    display: flex;
+    border-bottom: 1px solid var(--mainColor);
+  }
+  
+  .input-group .icon {
+    padding: 20px 10px;
+  }
+  
+  .input-group input {
+    padding: 20px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--light);
+  }
+  
+  .btn {
+    color: var(--light);
+    background: transparent;
+    padding: 10px 40px;
+    width: 100%;
+    border: 1px solid var(--mainColor);
+    transition-duration: 0.5s;
+  }
+  
+  .btn:hover {
+    cursor: pointer;
+    color: #000;
+    background: var(--mainColor);
+  }
+  
+  @media screen and (max-width: 900px) {
+    .navbar {
+      display: block;
+      height: auto;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 0;
+    }
+    .items {
+      text-align: center;
+      height: auto;
+      justify-content: center;
+      flex-direction: column;
+      padding: 0;
+    }
+  
+    .items .item {
+      overflow: hidden;
+      margin: 10px;
+    }
+    .container {
+      width: 100%;
+    }
+  }
+  
